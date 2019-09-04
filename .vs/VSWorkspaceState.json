@@ -1,12 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\client",
     "\\client\\public",
     "\\client\\src",
     "\\client\\src\\actions",
     "\\client\\src\\components",
     "\\client\\src\\components\\surveys",
-    "\\client\\src\\reducers"
+    "\\config"
   ],
+  "SelectedNode": "\\config\\prod.js",
   "PreviewInSolutionExplorer": false
 }
