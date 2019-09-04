@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 //Internal imports
 import Payments from './Payments';
 
-//Haeder component definition
+//Right header component definition
 class Header extends React.Component {
     //console.log(this.props);
     //Helper method implemented in the render() method below
-    renderContent() {
+    renderContentRight() {
         //showing buttons dependent of auth state
         switch (this.props.auth) {
             //if no auth state accessible (loading time)
@@ -39,7 +39,7 @@ class Header extends React.Component {
             //Navigation-bar
             <nav>
                 {/*Top bar*/}
-                <div className="ui inverted menu">
+                <div className="ui inverted fixed menu">
                     {/*Logo*/}
                     <Link
                         //Link to the root page of the app
@@ -54,8 +54,8 @@ class Header extends React.Component {
                     </Link>
                     {/*menu buttons from right aligned*/}
                     <ul className="right menu">
-                        {/*content of the menu button list is defined in helper method renderContent() above*/}
-                        {this.renderContent()}
+                        {/*content of the menu button list is defined in helper method renderContentRight() above*/}
+                        {this.renderContentRight()}
                     </ul>
                 </div>
             </nav>
