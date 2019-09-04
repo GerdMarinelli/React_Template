@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client\\public",
+    "\\client\\src",
+    "\\client\\src\\actions",
+    "\\client\\src\\components",
+    "\\client\\src\\components\\surveys",
+    "\\client\\src\\reducers"
+  ],
+  "PreviewInSolutionExplorer": false
+}
