@@ -39,10 +39,13 @@ class SurveyNew extends React.Component {
     //Rendering the content
     render() {
         return (
-            //little border to the left
-            <div style={{ margin: '10px 10px 0px 10px' }}>
-                {/*importing the renderContent helper function above*/}
-                {this.renderContent()}
+            //little border to the top
+            <div style={{ margin: '30px 0px 0px 0px' }}>
+                {/*centered container for complete form*/}
+                <div>
+                    {/*importing the renderContent helper function above*/}
+                    {this.renderContent()}
+                </div>
             </div>
         );
     }

@@ -14,9 +14,9 @@ export default ({ input, label, meta: { error, touched } }) => {
             {/*label with content from a property in the SurveyForm component*/}
             <label>{label}</label>
             {/*input field with all existing functions and values of props.input object -> same functionality like writing all the functions like onBlur={input.onBlur} onChange={input.onChange} ...*/}
-            <input {...input} style={{ marginBottom: '5px' }} />
+            <input {...input} type="text"/>
             {/*Tag for styling the error messages*/}
-            <div className="red-text" style={{ marginBottom: '20px' }}>
+            <div className="ui orange text" style={{ marginBottom: '20px' }}>
                 {/*output of the defined error messages possibly caused in all validated input fields that have already been touched*/}
                 {/*with && both statements have to be fullfilled to show the message*/}
                 {touched && error}

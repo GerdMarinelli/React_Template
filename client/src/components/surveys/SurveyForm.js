@@ -12,7 +12,7 @@ class SurveyForm extends React.Component {
     //helper function to be rendered inside the render() function below
     renderFields() {
         return (
-            <div className="ui form">
+            <div>
                 {/*Survey Title field*/}
                 <Field
                     //field definition from Redux Form
@@ -53,7 +53,7 @@ class SurveyForm extends React.Component {
     //rendering the content of the component
     render() {
         return (
-            <div>
+            <div className="ui form">
                 {/*form tag makes a Field tag submittable, function handleSubit() is from Redux Form*/}
                 {/*the value variable can be used to store the value to a DB or to use it for other purpose*/}
                 {/*<form onSubmit={this.props.handleSubmit(() => this.props.onSurveySubmit())}>*/}
@@ -73,16 +73,16 @@ class SurveyForm extends React.Component {
                 {/*execution of the helper function above*/}
                     {this.renderFields()}
                     {/*Cancel button with redirect to the /surveys path*/}
-                    <Link to="/surveys" className="red btn-flat left white-text">
-                        Cancel
+                    <Link to="/surveys" className="ui orange basic labeled icon button">
                         {/*Icon in submit button*/}
-                        <i className="material-icons right">close</i>
+                        <i className="left close icon"></i>
+                        CLOSE
                     </Link>
                     {/*Next button*/}
-                    <button type="submit" className="teal btn-flat right white-text">
-                        Next
+                    <button type="submit" className="ui green basic right labeled icon button">
                         {/*Icon in next button*/}
-                        <i className="material-icons right">arrow_forward</i>
+                        <i className="right arrow icon"></i>
+                        NEXT
                     </button>
                 </form>
             </div>

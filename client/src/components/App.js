@@ -25,7 +25,7 @@ class App extends React.Component {
     render() {
         return (
             //container to keep some left and right hand space, also prerequisite for some further settings
-            <div>
+            <div className="ui container">
                 {/*enabling of routing between paths*/}
                 <BrowserRouter>
                     <div>
