@@ -53,7 +53,7 @@ class SurveyForm extends React.Component {
     //rendering the content of the component
     render() {
         return (
-            <div className="ui form">
+            <div className="ui form" style={{ margin: '70px 0px 20px 0px' }}>
                 {/*form tag makes a Field tag submittable, function handleSubit() is from Redux Form*/}
                 {/*the value variable can be used to store the value to a DB or to use it for other purpose*/}
                 {/*<form onSubmit={this.props.handleSubmit(() => this.props.onSurveySubmit())}>*/}
@@ -73,13 +73,13 @@ class SurveyForm extends React.Component {
                 {/*execution of the helper function above*/}
                     {this.renderFields()}
                     {/*Cancel button with redirect to the /surveys path*/}
-                    <Link to="/surveys" className="ui orange basic labeled icon button">
+                    <Link to="/surveys" className="ui orange basic labeled icon left floated button">
                         {/*Icon in submit button*/}
                         <i className="left close icon"></i>
                         CLOSE
                     </Link>
                     {/*Next button*/}
-                    <button type="submit" className="ui green basic right labeled icon button">
+                    <button type="submit" className="ui green basic labeled icon right floated button">
                         {/*Icon in next button*/}
                         <i className="right arrow icon"></i>
                         NEXT

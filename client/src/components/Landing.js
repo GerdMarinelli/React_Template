@@ -5,7 +5,7 @@ import React from 'react';
 const Landing = () => {
     return (
         //some very simple content center aligned
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", margin: '70px 0px 20px 0px' }}>
             <h1>
                 Survey
             </h1>

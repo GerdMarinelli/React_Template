@@ -18,7 +18,7 @@ class SurveyList extends React.Component {
         //map() is iterating through the objects and creating cards for each survey object
         return this.props.surveys.reverse().map(survey => {
             return (
-                <div className="ui card grey fluid" key={survey._id}>
+                <div className="ui yellow card fluid" key={survey._id}>
                     <div className="content">
                         <span className="header">
                             {survey.title}
@@ -46,7 +46,7 @@ class SurveyList extends React.Component {
     //rendering the content of the component
     render() {
         return (
-            <div>
+            <div style={{ margin: '70px 0px 20px 0px' }}>
                 {this.renderSurveys()}
             </div>
         );

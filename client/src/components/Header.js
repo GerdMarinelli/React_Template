@@ -21,15 +21,30 @@ class Header extends React.Component {
             case false:
                 //show the authentication page with login button
                 return (
-                    <li><a className="ui inverted blue basic button" href="/auth/google">Login with Google</a></li>
+                    <li><a className="grey item" href="/auth/google">Login with Google</a></li>
                 );
             //if user is already logged in
             default:
                 //show the dashboard page with logout, credits info and payments buttons
                 return [
-                    <li key="1"><div className="ui inverted blue basic button">Credits: {this.props.auth.credits}</div></li>,
-                    <li key="2"><Payments /></li>,
-                    <li key="3"><a className="ui inverted blue basic button" href="/api/logout">Logout</a></li>
+                    <li key="1">
+                        <Link to="/surveys/new" className="grey item">
+                            New Survey
+                        </Link>
+                    </li>,
+                    <li key="2">
+                        <div className="grey item">
+                            Credits: {this.props.auth.credits}
+                        </div>
+                    </li>,
+                    <li key="3">
+                        <Payments />
+                    </li>,
+                    <li key="4">
+                        <a className="grey item" href="/api/logout">
+                            Logout
+                        </a>
+                    </li>
                 ];
         }
     }
@@ -39,15 +54,15 @@ class Header extends React.Component {
             //Navigation-bar
             <nav>
                 {/*Top bar*/}
-                <div className="ui inverted fixed menu">
+                <div className="ui inverted fixed mini menu">
                     {/*Logo*/}
                     <Link
                         //Link to the root page of the app
                         to={this.props.auth ? '/surveys' : '/'}
                         //Logo definition from the ui framework
-                        className="item"
+                        className="mini item"
                         //little border to the left
-                        style={{margin: '0 0 0 10px'}}
+                        style={{ margin: '0 0 0 10px' }}
                     >
                         {/*Logo content, can also be a pic file*/}
                         Survey

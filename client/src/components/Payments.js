@@ -25,7 +25,7 @@ class Payments extends React.Component {
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             >
                 {/*button in header to reach the Stripe component*/}
-                <button className="ui inverted blue basic button">Get Credits</button>
+                <div className="grey item">Get Credits</div>
             </StripeCheckout>
         );
     }

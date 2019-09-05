@@ -9,8 +9,8 @@ import * as actions from '../../actions';
 //Definition of the SurveyFormReview component making use of the onCancel() function, the formValues props, the react-router history object props and the submitSurvey() function
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     return (
-        <div className="ui form">
-            <h6>Please check and confirm your entries</h6>
+        <div className="ui form" style={{ margin: '70px 0px 20px 0px' }}>
+            <h1>Please check and confirm your entries</h1>
             {/*surveys fields content*/}
             {/*Survey Title*/}
             <div>
@@ -41,7 +41,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
                 </div>
             </div>
             {/*Back button with redirect to the /surveys/new path, onCancel() comes from SurveyNew component*/}
-            <button className="ui orange basic labeled icon button" onClick={onCancel}>
+            <button className="ui orange basic labeled left floated icon button" onClick={onCancel}>
                 {/*Icon in back button*/}
                 <i className="left arrow icon"></i>
                 BACK
@@ -50,7 +50,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
             {/*onClick triggers the submitSurvey() action creator and references the formValues of redux store*/}
             {/*by adding the history object of redux-router, the history state is send to the action creator by clicking the send button*/}
             {/*arrow function in onClick() is used to not be executed directly with loading (because of a function in onClick), but only when the user clicks the button*/}
-            <button type="submit" className="ui green basic right labeled icon button" onClick={() => submitSurvey(formValues, history)}>
+            <button type="submit" className="ui green basic right labeled right floated icon button" onClick={() => submitSurvey(formValues, history)}>
                 {/*Icon in send survey button*/}
                 <i className="envelope icon"></i>
                 SEND SURVEY
