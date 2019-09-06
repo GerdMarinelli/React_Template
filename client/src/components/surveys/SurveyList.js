@@ -46,7 +46,7 @@ class SurveyList extends React.Component {
     //rendering the content of the component
     render() {
         return (
-            <div style={{ margin: '70px 40px 40px 200px' }}>
+            <div style={{ margin: '70px 40px 40px 200px', minHeight: '80vh' }}>
                 {this.renderSurveys()}
             </div>
         );

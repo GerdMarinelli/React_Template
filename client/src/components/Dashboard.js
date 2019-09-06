@@ -13,12 +13,12 @@ const Dashboard = () => {
                 <Link to="/surveys/new" className="grey item" style={{ margin: '30px 0px 0px 0px' }}>
                     New Survey
                 </Link>
-                <a className="item">
+                <Link to="/surveys" className="item">
                     2
-                </a>
-                <a className="item">
+                </Link>
+                <Link to="/surveys" className="item">
                     3
-                </a>
+                </Link>
             </div>
             {/*list of already created surveys*/}
             <SurveyList />

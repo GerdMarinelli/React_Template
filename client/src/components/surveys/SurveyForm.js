@@ -14,15 +14,15 @@ class SurveyForm extends React.Component {
         return (
             <div>
                 <div className="ui visible thin sidebar inverted vertical tiny menu">
-                    <a className="item" style={{ margin: '30px 0px 0px 0px' }}>
+                    <Link to="/surveys" className="item" style={{ margin: '30px 0px 0px 0px' }}>
                         1
-                    </a>
-                    <a className="item">
+                    </Link>
+                    <Link to="/surveys" className="item">
                         2
-                    </a>
-                    <a className="item">
+                    </Link>
+                    <Link to="/surveys" className="item">
                         3
-                    </a>
+                    </Link>
                 </div>
                 {/*Survey Title field*/}
                 <Field
@@ -64,7 +64,7 @@ class SurveyForm extends React.Component {
     //rendering the content of the component
     render() {
         return (
-            <div className="ui form" style={{ margin: '70px 40px 400px 200px' }}>
+            <div className="ui form" style={{ margin: '70px 40px 40px 200px', minHeight: '80vh' }}>
                 {/*form tag makes a Field tag submittable, function handleSubit() is from Redux Form*/}
                 {/*the value variable can be used to store the value to a DB or to use it for other purpose*/}
                 {/*<form onSubmit={this.props.handleSubmit(() => this.props.onSurveySubmit())}>*/}

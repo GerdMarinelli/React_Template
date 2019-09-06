@@ -3,19 +3,19 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "piterion_logo_only_64x35.ico",
+      "sizes": "64x35 32x17 24x13 16x8",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "res/pics/piterion_logo_192x30.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x30"
     },
     {
-      "src": "logo512.png",
+      "src": "piterion_logo_512x80.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x80"
     }	    
   ],
   "start_url": ".",

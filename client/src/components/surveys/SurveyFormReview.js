@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux'; //Redux Form doesn't care about fetching data out of the redux store, so we here need the normal redux connect functionality
 import { withRouter } from 'react-router-dom'; //to get access to the history object of react-router in the component's props system also without having react-router in this component
+import { Link } from 'react-router-dom'; //to redirect to any position inside the app
 
 //Internal Imports
 import * as actions from '../../actions';
@@ -11,17 +12,17 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     return (
         <div>
             <div className="ui visible thin sidebar inverted vertical tiny menu">
-                <a className="item" style={{ margin: '30px 0px 0px 0px' }}>
+                <Link to="/surveys" className="item" style={{ margin: '30px 0px 0px 0px' }}>
                     1
-                    </a>
-                <a className="item">
+                    </Link>
+                <Link to="/surveys" className="item">
                     2
-                    </a>
-                <a className="item">
+                    </Link>
+                <Link to="/surveys" className="item">
                     3
-                    </a>
+                    </Link>
             </div>
-            <div className="ui form" style={{ margin: '70px 40px 360px 200px' }}>
+            <div className="ui form" style={{ margin: '70px 40px 40px 200px', minHeight: '80vh' }}>
                 <h1>Please check and confirm your entries</h1>
                 {/*surveys fields content*/}
                 {/*Survey Title*/}

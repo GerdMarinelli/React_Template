@@ -1,6 +1,8 @@
 //reusable function to validate the format of an email
 //regex js validation string for emails
+
 const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 export default (recipients) => {
     //splitting the string with several emails and delete empty spaces in front and behind "each" email, not only in front and behind the array
     const invalidEmails = recipients

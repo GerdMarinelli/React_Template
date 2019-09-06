@@ -1,5 +1,6 @@
 //External imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //Footer component definition
 class Footer extends React.Component {
@@ -12,28 +13,28 @@ class Footer extends React.Component {
                         <div className="three wide column">
                             <h4 className="ui inverted header">Group 1</h4>
                             <div className="ui inverted link list">
-                                <a href="#" className="item">Link One</a>
-                                <a href="#" className="item">Link Two</a>
-                                <a href="#" className="item">Link Three</a>
-                                <a href="#" className="item">Link Four</a>
+                                <Link to="/surveys" className="item">Link One</Link>
+                                <Link to="/surveys" className="item">Link Two</Link>
+                                <Link to="/surveys" className="item">Link Three</Link>
+                                <Link to="/surveys" className="item">Link Four</Link>
                             </div>
                         </div>
                         <div className="three wide column">
                             <h4 className="ui inverted header">Group 2</h4>
                             <div className="ui inverted link list">
-                                <a href="#" className="item">Link One</a>
-                                <a href="#" className="item">Link Two</a>
-                                <a href="#" className="item">Link Three</a>
-                                <a href="#" className="item">Link Four</a>
+                                <Link to="/surveys" className="item">Link One</Link>
+                                <Link to="/surveys" className="item">Link Two</Link>
+                                <Link to="/surveys" className="item">Link Three</Link>
+                                <Link to="/surveys" className="item">Link Four</Link>
                             </div>
                         </div>
                         <div className="three wide column">
                             <h4 className="ui inverted header">Group 3</h4>
                             <div className="ui inverted link list">
-                                <a href="#" className="item">Link One</a>
-                                <a href="#" className="item">Link Two</a>
-                                <a href="#" className="item">Link Three</a>
-                                <a href="#" className="item">Link Four</a>
+                                <Link to="/surveys" className="item">Link One</Link>
+                                <Link to="/surveys" className="item">Link Two</Link>
+                                <Link to="/surveys" className="item">Link Three</Link>
+                                <Link to="/surveys" className="item">Link Four</Link>
                             </div>
                         </div>
                         <div className="seven wide column">
@@ -42,12 +43,12 @@ class Footer extends React.Component {
                         </div>
                     </div>
                     <div className="ui inverted section divider"></div>
-                    <img src="assets/images/logo.png" className="ui centered mini image" />
+                    <img className="ui centered small image" src="/res/pics/piterion_logo_transparent.png" alt="piterion-logo" />
                     <div className="ui horizontal inverted small divided link list">
-                        <a className="item" href="#">Site Map</a>
-                        <a className="item" href="#">Contact Us</a>
-                        <a className="item" href="#">Terms and Conditions</a>
-                        <a className="item" href="#">Privacy Policy</a>
+                        <Link to="/surveys" className="item">Site Map</Link>
+                        <Link to="/surveys" className="item">Contact Us</Link>
+                        <Link to="/surveys" className="item">Terms and Conditions</Link>
+                        <Link to="/surveys" className="item">Privacy Policy</Link>
                     </div>
                 </div>
             </div>
