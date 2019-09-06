@@ -1,7 +1,6 @@
 //External imports
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 //Internal imports
 import Payments from './Payments';
@@ -28,19 +27,14 @@ class Header extends React.Component {
                 //show the dashboard page with logout, credits info and payments buttons
                 return [
                     <li key="1">
-                        <Link to="/surveys/new" className="grey item">
-                            New Survey
-                        </Link>
-                    </li>,
-                    <li key="2">
                         <div className="grey item">
                             Credits: {this.props.auth.credits}
                         </div>
                     </li>,
-                    <li key="3">
+                    <li key="2">
                         <Payments />
                     </li>,
-                    <li key="4">
+                    <li key="3">
                         <a className="grey item" href="/api/logout">
                             Logout
                         </a>
@@ -54,19 +48,7 @@ class Header extends React.Component {
             //Navigation-bar
             <nav>
                 {/*Top bar*/}
-                <div className="ui inverted fixed mini menu">
-                    {/*Logo*/}
-                    <Link
-                        //Link to the root page of the app
-                        to={this.props.auth ? '/surveys' : '/'}
-                        //Logo definition from the ui framework
-                        className="mini item"
-                        //little border to the left
-                        style={{ margin: '0 0 0 10px' }}
-                    >
-                        {/*Logo content, can also be a pic file*/}
-                        Survey
-                    </Link>
+                <div className="ui inverted fixed tiny menu">
                     {/*menu buttons from right aligned*/}
                     <ul className="right menu">
                         {/*content of the menu button list is defined in helper method renderContentRight() above*/}

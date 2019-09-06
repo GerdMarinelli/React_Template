@@ -13,6 +13,7 @@ import Landing from './Landing';
 import Dashboard from './Dashboard';
 //const SurveyNew = () => <h2>ServeyNew</h2> //was only an intermediate step to show some content before creating the SurveyNew component
 import SurveyNew from './surveys/SurveyNew';
+import Footer from './Footer';
 
 //creation of the App component
 class App extends React.Component {
@@ -25,7 +26,7 @@ class App extends React.Component {
     render() {
         return (
             //container to keep some left and right hand space, also prerequisite for some further settings
-            <div className="ui container">
+            <div className="ui fluid container">
                 {/*enabling of routing between paths*/}
                 <BrowserRouter>
                     <div>
@@ -36,6 +37,8 @@ class App extends React.Component {
                         <Route path="/" exact component={Landing} />
                         <Route path="/surveys" exact component={Dashboard} />
                         <Route path="/surveys/new" exact component={SurveyNew} />
+                        {/*Footer is defined in the Footer component*/}
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>

@@ -2,13 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\public",
     "\\client\\src",
     "\\client\\src\\actions",
     "\\client\\src\\components",
     "\\client\\src\\components\\surveys",
     "\\config"
   ],
-  "SelectedNode": "\\client\\public\\index.html",
+  "SelectedNode": "\\Access-Codes.txt",
   "PreviewInSolutionExplorer": false
 }

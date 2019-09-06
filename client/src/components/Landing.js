@@ -5,11 +5,11 @@ import React from 'react';
 const Landing = () => {
     return (
         //some very simple content center aligned
-        <div style={{ textAlign: "center", margin: '70px 0px 20px 0px' }}>
-            <h1>
-                Survey
-            </h1>
-            Collect feedback from your users!
+        <div className="ui inverted segment">
+            <div style={{ textAlign: "center", margin: '70px 0px 120px 0px' }}>
+                <img className="ui centered big fluid image" src="/res/pics/piterion_logo_transparent.png" />
+            </div>
+            <img className="ui fluid image" src="/res/pics/piterion_landing.png" />
         </div>
     );
 }
