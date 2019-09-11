@@ -2,9 +2,9 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
-const User = mongoose.model('users');
 
 //Internal imports
+const User = mongoose.model('users');
 const keys = require('../config/keys');
 
 //identification of a user before execution of some auth strategy

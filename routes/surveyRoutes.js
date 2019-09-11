@@ -107,7 +107,7 @@ module.exports = (app) => {
                 //first object describes the request to mongoDB
                 //mongoose function updateOne() and all included definitions searches and updates exactly one record "inside" the mongoDB infrastructure, no data traffic between mongoDB and Express!
                 Survey.updateOne({
-                    //if mongoDB _id is same a the surveyId of the SendGrid response object
+                    //if mongoDB _id is same as the surveyId of the SendGrid response object
                     _id: surveyId,
                     //if one of the recipients in the survey object
                     recipients: {
@@ -164,9 +164,9 @@ module.exports = (app) => {
             //reduction of credits
             req.user.credits -= 1;
             //fetch user and save the user to the survey document
-            const user = await req.user.save();
             //update the user model because of reduced credits
-            //Header hets automatically updated because the FETCH_USER action type gets rerendered after every user model update
+            const user = await req.user.save();
+            //Header gets automatically updated because the FETCH_USER action type gets rerendered after every user model update
             res.send(user);
         //catch error messages from SendGrid
         } catch (err) {

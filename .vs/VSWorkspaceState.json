@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\client",
+    "\\client\\public",
+    "\\client\\public\\res",
+    "\\client\\public\\res\\pics",
     "\\client\\src",
     "\\client\\src\\actions",
     "\\client\\src\\components",
     "\\client\\src\\components\\surveys",
-    "\\config"
+    "\\client\\src\\utils"
   ],
-  "SelectedNode": "\\Access-Codes.txt",
+  "SelectedNode": "\\React_Template_Flow.pdf",
   "PreviewInSolutionExplorer": false
 }
