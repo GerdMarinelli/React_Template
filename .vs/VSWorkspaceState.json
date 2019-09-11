@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\public",
-    "\\client\\public\\res",
-    "\\client\\public\\res\\pics",
     "\\client\\src",
-    "\\client\\src\\actions",
-    "\\client\\src\\components",
-    "\\client\\src\\components\\surveys",
-    "\\client\\src\\utils"
+    "\\client\\src\\reducers",
+    "\\config",
+    "\\middlewares",
+    "\\models",
+    "\\routes",
+    "\\services",
+    "\\services\\emailTemplates"
   ],
-  "SelectedNode": "\\React_Template_Flow.pdf",
+  "SelectedNode": "\\client\\src\\reducers\\authReducer.js",
   "PreviewInSolutionExplorer": false
 }
