@@ -5,6 +5,7 @@ const proxy = require('http-proxy-middleware');
 module.exports = function (app) {
     //authorization route
     app.use(proxy('/auth/google', { target: 'http://localhost:5000' }));
+	app.use(proxy('/auth/facebook', { target: 'http://localhost:5000' }));
     //all other servey functionality routes
     app.use(proxy('/api/**', { target: 'http://localhost:5000' }));
 };

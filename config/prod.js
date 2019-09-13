@@ -4,6 +4,9 @@ module.exports = {
     //Google authorisation
     googleClientID: process.env.GOOGLE_CLIENT_ID,
     googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
+	//Facebook authorization
+	facebookClientID: process.env.FACEBOOK_CLIENT_ID,
+	facebookClientSecret: process.env.FACEBOOK_CLIENT_SECRET,
     //MongoDB
     mongoURI: process.env.MONGO_URI,
     //encryption key for cookies

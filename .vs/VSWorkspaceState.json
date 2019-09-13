@@ -3,14 +3,14 @@
     "",
     "\\client",
     "\\client\\src",
-    "\\client\\src\\reducers",
-    "\\config",
-    "\\middlewares",
+    "\\client\\src\\actions",
+    "\\client\\src\\components",
+    "\\client\\src\\components\\surveys",
     "\\models",
     "\\routes",
     "\\services",
     "\\services\\emailTemplates"
   ],
-  "SelectedNode": "\\client\\src\\reducers\\authReducer.js",
+  "SelectedNode": "\\services\\passport.js",
   "PreviewInSolutionExplorer": false
 }

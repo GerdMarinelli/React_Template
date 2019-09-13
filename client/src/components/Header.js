@@ -19,9 +19,10 @@ class Header extends React.Component {
             //if user is not logged in
             case false:
                 //show the authentication page with login button
-                return (
-                    <li><a className="grey item" href="/auth/google">Login with Google</a></li>
-                );
+                return [
+                    <li key="1"><a className="grey item" href="/auth/google">Login with Google</a></li>,
+					<li key="2"><a className="grey item" href="/auth/facebook">Login with Facebook</a></li>
+                ];
             //if user is already logged in
             default:
                 //show the dashboard page with logout, credits info and payments buttons

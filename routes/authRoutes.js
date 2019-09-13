@@ -3,12 +3,18 @@ const passport = require('passport');
 
 //definition of routes for API requests
 module.exports = (app) => {
-    //GET request for Google authentication using passport functionality
+    
+	//GET request for Google authentication using passport functionality
     app.get('/auth/google', passport.authenticate('google', {
         //definition of user data we want to get from Google
         scope: ['profile', 'email']
     }));
-    //GET request for Google authentication using passport functionality
+	//GET request for Facebook authentication using passport functionality
+	app.get('/auth/facebook', passport.authenticate('facebook', {
+		scope: ['email']
+	}));
+    
+	//GET request for Google authentication using passport functionality
     app.get(
         '/auth/google/callback',
         passport.authenticate('google'),
@@ -17,13 +23,24 @@ module.exports = (app) => {
             res.redirect('/surveys');
         }
     );
-    //GET request to logout
+	//GET request forFacebookle authentication using passport functionality
+    app.get(
+        '/auth/facebook/callback',
+        passport.authenticate('facebook'),
+        (req, res) => {
+            //if we get a positive user auth response object from Facebook, then forward to this route
+            res.redirect('/surveys');
+        }
+    );
+    
+	//GET request to logout
     app.get('/api/logout', (req, res) => {
         req.logout();
         //after logout forward to the welcome page
         res.redirect('/');
     });
-    //GET request to identify the current user
+    
+	//GET request to identify the current user
     app.get('/api/current_user', (req, res) => {
         res.send(req.user);
     });
