@@ -33,7 +33,9 @@ class Header extends React.Component {
                         </div>
                     </li>,
                     <li key="2">
-                        <Payments />
+						<div className="grey item">
+							<Payments />
+						</div>
                     </li>,
                     <li key="3">
                         <a className="grey item" href="/api/logout">

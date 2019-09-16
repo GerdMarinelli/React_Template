@@ -23,9 +23,7 @@ class Payments extends React.Component {
                 token={token => this.props.handleToken(token)}
                 //stripe key to identify the software's Stripe account owner
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
-            >
-                {/*button in header to reach the Stripe component*/}
-                <div className="grey item">Get Credits</div>
+            >Get Credits
             </StripeCheckout>
         );
     }
