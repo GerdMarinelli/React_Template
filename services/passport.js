@@ -58,7 +58,7 @@ passport.use(new FacebookStrategy({
 	clientID: keys.facebookClientID,
 	clientSecret: keys.facebookClientSecret,
 	//definition of the callback path for communication between Facebook and the software
-	callbackURL: "https://react.open-bc.com/auth/facebook/callback"
+	callbackURL: keys.facebookCallbackURL
 	//some passport functionality
 	//proxy: true
 },
