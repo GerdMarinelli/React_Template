@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\public",
     "\\client\\src",
-    "\\client\\src\\reducers",
-    "\\client\\src\\utils",
-    "\\config",
+    "\\client\\src\\actions",
+    "\\client\\src\\components",
     "\\middlewares",
+    "\\models",
+    "\\routes",
     "\\services",
     "\\services\\emailTemplates"
   ],
-  "SelectedNode": "\\services\\passport.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
