@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\client",
+    "\\client\\public",
     "\\client\\src",
-    "\\client\\src\\actions",
-    "\\client\\src\\components",
-    "\\client\\src\\components\\surveys",
-    "\\models",
-    "\\routes",
+    "\\client\\src\\reducers",
+    "\\client\\src\\utils",
+    "\\config",
+    "\\middlewares",
     "\\services",
     "\\services\\emailTemplates"
   ],

@@ -51,4 +51,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 //web app port definition: get it from the web-app provider's env variable or set port to 5000
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, console.log(`Server started on port ${PORT}`));

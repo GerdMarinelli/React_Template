@@ -4,23 +4,6 @@ import axios from 'axios';
 //Internal imports
 import { FETCH_USER, FETCH_SURVEYS } from './types';
 
-//completely written function before ES2015 refactoring
-/*
-export const fetchUser = () => {
-    return function (dispatch) {
-        //fetch user info out of the DB from the predefined RestAPI path
-        axios
-            .get('/api/current_user')
-            //update of the local user model
-            .then(res => dispatch({
-                //description of requested data
-                type: FETCH_USER,
-                //response data from the DB
-                payload: res
-            }));
-    };
-};
-*/
 //Action creator to get info about current user
 export const fetchUser = () => async dispatch => {
     //fetch user info out of the DB from the predefined RestAPI path
