@@ -13,10 +13,13 @@ require('./services/passport');
 
 //inizializing the mongoDB with our credentials
 mongoose.connect(keys.mongoURI);
+
 //initializing that our app object is running with Express
 const app = express();
+
 //initializing that we are using the body-parser middleware in our app
 app.use(bodyParser.json());
+
 //initializing that we are using the cookie-session middleware in our app
 app.use(
     //cookie definition
@@ -27,19 +30,16 @@ app.use(
         keys: [keys.cookieKey]
     })
 );
+
 //Passport inizialization
 app.use(passport.initialize());
 app.use(passport.session());
+
 //routes definition for this app
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 require('./routes/surveyRoutes')(app);
-//Test-Code for some first API requests to our Express API
-/*
-app.get('/', (req, res) => {
-    res.send({ bye: 'buddy' });
-});
-*/
+
 //definition that in production
 if (process.env.NODE_ENV === 'production') {
     //software is using the deployed build in this defined folder
@@ -49,6 +49,7 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
+
 //web app port definition: get it from the web-app provider's env variable or set port to 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
