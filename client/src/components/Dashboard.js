@@ -11,6 +11,7 @@ const Dashboard = () => {
         <div>
             <div className="ui visible thin sidebar inverted vertical tiny menu">
                 <Link to="/surveys/new" className="grey item" style={{ margin: '30px 0px 0px 0px' }}>
+					<i className="large plus circle icon"></i>
                     New Survey
                 </Link>
                 <Link to="/surveys" className="item">

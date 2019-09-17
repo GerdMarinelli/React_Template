@@ -7,61 +7,60 @@ import Payments from './Payments';
 
 //Right header component definition
 class Header extends React.Component {
-    //console.log(this.props);
-    //Helper method implemented in the render() method below
-    renderContentRight() {
-        //showing buttons dependent of auth state
-        switch (this.props.auth) {
-            //if no auth state accessible (loading time)
-            case null:
-                //keep as it is
-                return;
-            //if user is not logged in
-            case false:
-                //show the authentication page with login button
-                return [
-                    <li key="1"><a className="grey item" href="/auth/google">Login with Google</a></li>,
-					<li key="2"><a className="grey item" href="/auth/facebook">Login with Facebook</a></li>
-                ];
-            //if user is already logged in
-            default:
-                //show the dashboard page with logout, credits info and payments buttons
-                return [
-                    <li key="1">
-                        <div className="grey item">
-                            Credits: {this.props.auth.credits}
-                        </div>
-                    </li>,
-                    <li key="2">
-						<div className="grey item">
-							<Payments />
-						</div>
-                    </li>,
-                    <li key="3">
-                        <a className="grey item" href="/api/logout">
-                            Logout
-                        </a>
-                    </li>
-                ];
-        }
-    }
+	//console.log(this.props);
     //Render method for the Header class
     render() {
-        return (
-            //Navigation-bar
-            <nav>
-                {/*Top bar*/}
-                <div className="ui inverted fixed tiny menu">
-                    {/*menu buttons from right aligned*/}
-                    <ul className="right menu">
-                        {/*content of the menu button list is defined in helper method renderContentRight() above*/}
-                        {this.renderContentRight()}
-                    </ul>
-                </div>
-            </nav>
-        );
-    }
-}
+		//showing buttons dependent of auth state
+		switch (this.props.auth) {
+			//if no auth state accessible (loading time)
+			case null:
+				//keep as it is
+				return null;
+			//if user is not logged in
+			case false:
+				//show the authentication page with login button
+				return(
+					<nav>
+						<div className="ui inverted fixed tiny menu">
+							<div className="right menu">
+								<div className="ui simple dropdown item">
+									<i className="big sign-in icon"></i>
+									<div className="menu">
+										<a className="grey item" href="/auth/google">
+											<i className="google icon"></i>
+											Google
+										</a>
+										<a className="grey item" href="/auth/facebook">
+											<i className="facebook icon"></i>	
+											Facebook
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</nav>
+				);
+			default:
+				return (
+					<nav>
+						<div className="ui inverted fixed tiny menu">
+							<div className="right menu">
+								<div className="grey item">
+									Credits: {this.props.auth.credits}
+								</div>
+								<div className="grey item">
+									<Payments />
+								</div>
+								<a className="grey item" href="/api/logout">
+									<i className="large sign-out icon"></i>
+								</a>
+							</div>
+						</div>
+					</nav>
+				);
+		};
+    };
+};
 //Mapping the changed auth state to the overall props system
 function mapStateToProps(state) {
     //output of the Header component
