@@ -3,7 +3,8 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 
-//router.use(express.json());
+//Internal imports
+const users = require('../models/User');
 
 //Route to the registration form
 router.get('/register', function (req, res) {
@@ -47,6 +48,18 @@ router.post('/register', [
                 errors: errors.array({ onlyFirstError: true })
             });
         } else {
+            const newUser = new users({
+                name: name,
+                email: email,
+                username: username,
+                password: password
+            });
+
+            users.createUser(newUser, function (err, user) {
+                if (err) throw err;
+                console.log(user);
+            });
+
             req.flash('success_msg', 'You are registered and now can login');
             res.redirect('/users/login');
         }
